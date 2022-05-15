@@ -192,39 +192,17 @@ juce::AudioProcessorEditor* LiveGUIAudioProcessor::createEditor()
 }
 
 //==============================================================================
+// SAVE
 void LiveGUIAudioProcessor::getStateInformation (juce::MemoryBlock& destData)
 {
-#if JucePlugin_Enable_ARA
-    if (isBoundToARA())
-    {
-        // When using ARA, all model state is stored in the ARA archives,
-        // and the state here in the plug-in instance is limited to
-        // view configuration data or other editor settings or remains empty.
-    }
-    else
-#endif
-    {
-        // You should use this method to store your parameters in the memory block.
-        // You could do that either as raw data, or use the XML or ValueTree classes
-        // as intermediaries to make it easy to save and load complex data.
-    }
+
+    
 }
 
+// LOAD
 void LiveGUIAudioProcessor::setStateInformation (const void* data, int sizeInBytes)
 {
-#if JucePlugin_Enable_ARA
-    if (isBoundToARA())
-    {
-        // When using ARA, all model state is stored in the ARA archives,
-        // and the state here in the plug-in instance is limited to
-        // view configuration data or other editor settings or remains empty.
-    }
-    else
-#endif
-    {
-        // You should use this method to restore your parameters from this memory block,
-        // whose contents will have been created by the getStateInformation() call.
-    }
+
 }
 
 //==============================================================================

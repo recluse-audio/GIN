@@ -10,6 +10,7 @@
 
 #pragma once
 #include "JuceHeader.h"
+#include "SVG_LnF.h"
 
 class SVG_Lnf : public juce::LookAndFeel_V4
 {

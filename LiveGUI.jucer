@@ -15,14 +15,19 @@
         <FILE id="nSMscC" name="SVG_LnF.h" compile="0" resource="0" file="Source/SVG_LnF.h"/>
       </GROUP>
       <GROUP id="{AC838229-F4E6-18F1-7F81-06DFA61C456F}" name="COMPONENTS">
+        <GROUP id="{34FCA66C-5493-0DD9-5C42-10D60E2D49E0}" name="EDITOR">
+          <FILE id="e7m3hT" name="PluginEditor.cpp" compile="1" resource="0"
+                file="Source/PluginEditor.cpp"/>
+          <FILE id="M0HghZ" name="PluginEditor.h" compile="0" resource="0" file="Source/PluginEditor.h"/>
+        </GROUP>
+        <GROUP id="{5836A9AE-8A11-03CE-5039-E6CE73DA8DEA}" name="SVG_COMP">
+          <FILE id="UP59r9" name="ComponentData.h" compile="0" resource="0" file="Source/ComponentData.h"/>
+          <FILE id="d29piw" name="GinComponent.h" compile="0" resource="0" file="Source/GinComponent.h"/>
+          <FILE id="PWujnH" name="GinComponent.cpp" compile="1" resource="0"
+                file="Source/GinComponent.cpp"/>
+        </GROUP>
         <FILE id="W4fxsh" name="SliderSVG.cpp" compile="1" resource="0" file="Source/SliderSVG.cpp"/>
         <FILE id="iZ9xPG" name="SliderSVG.h" compile="0" resource="0" file="Source/SliderSVG.h"/>
-        <FILE id="PWujnH" name="SVGComponent.cpp" compile="1" resource="0"
-              file="Source/SVGComponent.cpp"/>
-        <FILE id="d29piw" name="SVGComponent.h" compile="0" resource="0" file="Source/SVGComponent.h"/>
-        <FILE id="e7m3hT" name="PluginEditor.cpp" compile="1" resource="0"
-              file="Source/PluginEditor.cpp"/>
-        <FILE id="M0HghZ" name="PluginEditor.h" compile="0" resource="0" file="Source/PluginEditor.h"/>
       </GROUP>
     </GROUP>
   </MAINGROUP>

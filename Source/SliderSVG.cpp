@@ -14,22 +14,23 @@
 //==============================================================================
 SliderSVG::SliderSVG()
 {
-    setSliderStyle(SliderStyle::LinearVertical);
-    setTextBoxStyle(TextEntryBoxPosition::NoTextBox, true, 10, 10);
-    
-    lnf = std::make_unique<SVG_Lnf>();
-    setLookAndFeel(lnf.get());
+
+
 }
 
 SliderSVG::~SliderSVG()
 {
+    setLookAndFeel(nullptr);
 }
 
-
-void SliderSVG::resized()
+juce::Drawable* SliderSVG::getDrawable()
 {
+    return bkgd.get();
+}
 
-
+bool SliderSVG::hasBkgdDrawable()
+{
+    return hasDrawable;
 }
 
 bool SliderSVG::isInterestedInFileDrag(const juce::StringArray& files)
@@ -50,10 +51,12 @@ void SliderSVG::filesDropped(const juce::StringArray& files, int x, int y)
         if(isInterestedInFileDrag(filePath))
         {
             auto svgFile = juce::File(filePath);
-            drawable = juce::Drawable::createFromSVGFile(svgFile);
+            bkgd = juce::Drawable::createFromSVGFile(svgFile);
             hasDrawable = true;
             repaint();
         }
     }
     
 }
+
+
