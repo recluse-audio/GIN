@@ -31,7 +31,14 @@ public:
     void loadFromXml(juce::File& fileToLoadFrom);
     
     void mouseDrag(const juce::MouseEvent& e) override;
+    void mouseUp(const juce::MouseEvent& e) override;
+    
 private:
+    std::unique_ptr<juce::Label> xLabel;
+    std::unique_ptr<juce::Label> yLabel;
+
+    juce::Point<int> lastPos; // referenced in mouse drag and set in mouseUp
+    
     bool hasDrawable = false;
     std::unique_ptr<juce::Drawable> drawable;
     
@@ -43,7 +50,7 @@ private:
     juce::String _ID = {""};
     juce::String _DrawablePath = {"default"};
     juce::Colour _backgroundColour;
-    // 
+    //
     std::unique_ptr<juce::XmlElement> _getXml();
     void _updateDrawable(juce::StringRef filePath);
 

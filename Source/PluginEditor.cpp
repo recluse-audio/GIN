@@ -34,7 +34,9 @@ LiveGUIAudioProcessorEditor::LiveGUIAudioProcessorEditor (LiveGUIAudioProcessor&
 //    slider->setTextBoxStyle(juce::Slider::TextEntryBoxPosition::TextBoxBelow, true, 40, 10);
 
     
-    setSize (400, 300);
+    setSize (1000, 1000);
+    ginComp->setBounds(450, 450, 100, 100);
+
 }
 
 LiveGUIAudioProcessorEditor::~LiveGUIAudioProcessorEditor()
@@ -49,11 +51,8 @@ void LiveGUIAudioProcessorEditor::paint (juce::Graphics& g)
 
 void LiveGUIAudioProcessorEditor::resized()
 {
-    ginComp->setBoundsRelative(0.25f, 0.25f, 0.5f, 0.5f);
     saveButton->setBoundsRelative(0.8f, 0.1f, 0.15f, 0.05f);
     loadButton->setBoundsRelative(0.05f, 0.1f, 0.15f, 0.05f);
-    //slider->setBoundsRelative(0.1f, 0.25f, 0.1f, 0.5f);
-
 }
 
 void LiveGUIAudioProcessorEditor::buttonClicked(juce::Button* b)
